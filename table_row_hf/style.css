@@ -1,0 +1,34 @@
+table, tr, td, th, thead{
+    border: dotted 1px rebeccapurple;
+}
+
+
+td:last-child{
+    background-color: blue;
+}
+
+
+td:first-child{
+    background-color: crimson;
+}
+
+
+tr:has(td[colespan]):hover td{
+    font-weight: bold;
+    background-color: cyan;
+}
+
+
+tr:has(td[colespan]):hover +tr td{
+    background-color: green;
+}
+
+
+tr:has(td[colespan]) + tr:hover td {
+    background-color: darkgoldenrod;
+}
+
+
+tr:not(:has[colespan]):hover td {
+    background-color: forestgreen;
+}
