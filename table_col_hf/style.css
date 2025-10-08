@@ -16,6 +16,6 @@ tbody tr:hover{
 }
 
 
-thead~tbody tr{
+thead,tbody tr{
     background-color: yellow;
 }
