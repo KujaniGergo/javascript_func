@@ -72,12 +72,13 @@ for (const adat of arr)
     tr.appendChild(td2)
     td2.innerText = adat.col2
 
-    const td3 = document.createElement("td")
-    tr.appendChild(td3)
-    td3.innerText = adat.col3
-
-    if(adat.col3==undefined){
-        td2.colSpan=2
+    if(adat.col3!=undefined){
+        td3 = document.createElement("td")
+        tr.appendChild(td3)
+        td3.innerText = adat.col3
+    }
+    else{
+        td2.colSpan = 2
     }
 }
 
