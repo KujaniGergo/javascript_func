@@ -48,7 +48,6 @@ th1.innerText = "Fizika területe"
 th2.innerText = "Időszak"
 th3.innerText = "Képviselők"
 
-
 th3.colSpan = 2
 
 
