@@ -3,39 +3,39 @@
  */
 
 
-const bumm = "1, 2, 3, 4, 5"
-console.log(bumm)
-const b=["a","b","c"]
-for(let i=0;i<b.length;i++)
-{
-    console.log(b[i])
-}
-console.log(b[1])
+// const bumm = "1, 2, 3, 4, 5"
+// console.log(bumm)
+// const b=["a","b","c"]
+// for(let i=0;i<b.length;i++)
+// {
+//     console.log(b[i])
+// }
+// console.log(b[1])
 
 
-for(const a of b)
-{
-    console.log(a)
-}
+// for(const a of b)
+// {
+//     console.log(a)
+// }
 
 
-for(const key in b)
-{
-    console.log(`${key}: ${b[key]}`)
-}
+// for(const key in b)
+// {
+//     console.log(`${key}: ${b[key]}`)
+// }
 
 
-const objektum=
-{
-    name : "Gergő",
-    age : 17
-}
+// const objektum=
+// {
+//     name : "Gergő",
+//     age : 17
+// }
 
 
-for(const key in objektum)
-{
-    console.log(objektum[key])
-}
+// for(const key in objektum)
+// {
+//     console.log(objektum[key])
+// }
 
 
 const arr = [
@@ -120,4 +120,18 @@ for (const szamlalo of arr)
     td4.innerText = szamlalo.szeretője2
     tr.appendChild(td4)
     }
+}
+
+/**
+ * létrehozunk egy táblázat cellát a bemeneti paramáterek alapján és hozzáfűzzük.
+ * @param {string} celltype "th","td" értéket vesz fel
+ * @param {string} cellcontent a cella tartalma
+ * @param {HTMLTableRowElement} parentrow sor amihez hozzá adjuk
+ */
+
+function createcell(celltype ,cellcontent,parentrow){
+    const celltype = document.createElement(celltype)
+    td.innerText = cellcontent
+    parentrow.appendChild(celltype)
+
 }
