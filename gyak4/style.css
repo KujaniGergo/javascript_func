@@ -1,0 +1,49 @@
+table, thead, tbody,tr,td,th{
+    border: 1px dotted rgb(2, 53, 73);
+    border-collapse: collapse;
+}
+
+
+tr td:nth-last-child(1), td:nth-last-child(3){
+    background-color: rgb(79, 249, 255);
+}
+
+
+button:has(+p){
+    background-color: rgb(96, 178, 255);
+}
+
+
+button:has(+button){
+    background-color: rgb(0, 26, 255);
+}
+
+
+#gyakorlas:has(+a:hover) button{
+    color: rgb(45, 247, 179);
+}
+
+
+tbody tr:not(:has(td[rowspan]))+tr:not(:has(td[rowspan])):hover td{
+    background-color: rgb(32, 165, 125);
+}
+
+
+tr:has(td[rowspan]):hover td{
+    background-color: rgb(57, 103, 255);
+}
+
+
+tr:has(td[rowspan]):hover +tr td{
+    background-color: green;
+}
+
+
+tr:has(td[rowspan]):has(+tr:hover) td{
+    background-color: green;
+}
+
+
+tr:has(td[rowspan])+tr:hover td{
+    background-color: green;
+}
