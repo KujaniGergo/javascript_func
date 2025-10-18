@@ -85,7 +85,6 @@ thead.appendChild(tr)
 
 const cimsor = ["Nemzetiség","Szerzó","Mű"]
 for (const fejlec of cimsor) {
-
     const th = document.createElement("th")
     tr.appendChild(th)
     th.innerText = fejlec
