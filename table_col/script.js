@@ -84,7 +84,7 @@ table.appendChild(tbody)
 th1.innerText = "Szerző neve"
 th2.innerText = "IdőKorszakszak"
 th3.innerText = "Szeretői"
-th3.colSpan = 2
+th2.colSpan = 2
 
 
 for (const szamlalo of arr) 
@@ -92,33 +92,17 @@ for (const szamlalo of arr)
     const tr = document.createElement('tr')
     tbody.appendChild(tr)
 
-
-    const td = document.createElement('td')
-    td.innerText = szamlalo.neve
-    tr.appendChild(td)
-
-
-    const td2 = document.createElement('td')
-    td2.innerText = szamlalo.kora
-    tr.appendChild(td2)
-
-
-    const td3= document.createElement('td')
-    td3.innerText = szamlalo.szeretője1
-    tr.appendChild(td3)
-
+    createcell("td",szamlalo.neve,tr)
+    createcell("td",szamlalo.kora,tr)
+    const td3 = createcell("td",szamlalo.szeretője1,tr)
 
     if (szamlalo.szeretője2 === undefined)
     {
          td3.colSpan = 2
     }
-
-
     else
     {
-    const td4 = document.createElement('td')
-    td4.innerText = szamlalo.szeretője2
-    tr.appendChild(td4)
+    createcell("td",szamlalo.szeretője2,tr)
     }
 }
 
@@ -127,11 +111,12 @@ for (const szamlalo of arr)
  * @param {string} celltype "th","td" értéket vesz fel
  * @param {string} cellcontent a cella tartalma
  * @param {HTMLTableRowElement} parentrow sor amihez hozzá adjuk
+ * @returns {HTMLTableCellElement} visszatélrunk a létrehozott táblzat cellával hogy késöbb tuduj módosítani annak a tuljdonságáz
  */
 
-function createcell(celltype ,cellcontent,parentrow){
-    const celltype = document.createElement(celltype)
+function createcell(celltype,cellcontent,parentrow){
+    const td = document.createElement(celltype)
     td.innerText = cellcontent
-    parentrow.appendChild(celltype)
-
+    parentrow.appendChild(td)
+    return td
 }
