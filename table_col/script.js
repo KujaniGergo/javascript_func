@@ -1,4 +1,29 @@
 /**
+@param {string} id
+@param {string} cim
+*/
+function Input(id,cim){
+    const label = document.createElement('label')
+    label.htmlFor =id
+    label.innerText=cim
+    form.appendChild(label)
+    Sortores()
+    
+    const input = document.createElement('input')
+    input.type ='text'
+    input.id = id
+    input.name = id
+    form.appendChild(input)
+    Sortores()
+
+}
+
+function Sortores(){
+    const br = document.createElement('br')
+    form.appendChild(br)
+}
+
+/**
  * @type {{neve: string, kora:string, szeretője1:string, szeretője2?:string}[]}
  */
 
@@ -120,3 +145,22 @@ function createcell(celltype,cellcontent,parentrow){
     parentrow.appendChild(td)
     return td
 }
+
+
+const form = document.createElement('form')
+const h2 = document.createElement('h2')
+
+
+document.body.appendChild(form)
+form.appendChild(h2)
+form.id = 'form_js'
+
+Input('Neve','költő neve:')
+Input('Kor','Korszak:')
+Input('Szerelme1','Szerelme:')
+Input('Szerelme2','Szerelme:')
+
+
+const button = document.createElement('button')
+button.innerText='Hozzáadás'
+form.appendChild(button)
