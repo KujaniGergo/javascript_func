@@ -1,0 +1,23 @@
+/*1.*/
+table,tbody,tr,td{
+    border: dotted 2px green;
+    border-collapse: collapse;
+}
+
+
+/*2.*/
+table thead, tr:nth-child(2n){
+    background-color: aqua;
+}
+
+
+/*3.*/
+#dolgozat div > p.error{
+    color: red;
+}
+
+
+/*4.*/
+#dolgozat:has(a[href="cica.html"]:hover) div{
+    background-color: red;
+}
