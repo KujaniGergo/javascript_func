@@ -84,3 +84,5 @@ for (const x of arr) {
         td4.innerText = x.szereplok2
     }
 }
+
+
